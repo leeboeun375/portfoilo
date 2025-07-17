@@ -654,8 +654,6 @@ Icon for all respective meta
 
 .blog-post-wrapper img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
     border-radius: 10px;
     display: block;
     image-rendering: -webkit-optimize-contrast;
