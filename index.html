@@ -41,8 +41,13 @@
   <!-- Home Section -->
   <section id="home" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
     <!-- Background Video Only -->
-    <video autoplay muted loop playsinline>
+    <video autoplay muted loop playsinline class="pc">
       <source src="assets/images/web_banner.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video autoplay muted loop playsinline class="mobile">
+      <source src="assets/images/mobile.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </section>
@@ -61,7 +66,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a> -->
+          <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt=""></a>
         </div>
 
         <div class="collapse navbar-collapse" id="custom-collapse">
@@ -155,14 +160,14 @@
       <div class="row">
         <div class="col-md-6">
           <article class="blog-post-wrapper">
-            <img src="./assets/images/01.jpg" class="img-responsive" alt="이미지">
+            <img src="./assets/images/01.png" class="img-responsive" alt="이미지">
             <div class="entry-title">
               <h3>brand BI&BX Guide</h3>
               <p>말랑빵냥 (로고/목업 디자인)</p>
 
               <div class="circle-button">
-                <a href="#">
-                  <img src="./assets/images/button.png" alt="더보기 버튼">
+                <a href="./assets/guide/bibx.html" target="_blank">
+                  <img src="./assets/images/button.png" class="button-img" alt="더보기 버튼">
                 </a>
               </div>
             </div>
@@ -171,16 +176,17 @@
 
         <div class="col-md-6">
           <article class="blog-post-wrapper">
-            <img src="./assets/images/02.jpg" class="img-responsive" alt="이미지">
+            <img src="./assets/images/02.png" class="img-responsive" alt="이미지">
             <div class="entry-title">
               <h3>Web Style Guide</h3>
               <p>말랑빵냥 웹 사이트 구조 둘러보기</p>
 
               <div class="circle-button">
-                <a href="#">
-                  <img src="./assets/images/button.png" alt="더보기 버튼">
+                <a href="./assets/guide/web.html" target="_blank">
+                  <img src="./assets/images/button.png" class="button-img" alt="더보기 버튼">
                 </a>
               </div>
+            </div>
           </article>
         </div>
       </div>
@@ -188,14 +194,14 @@
       <div class="row">
         <div class="col-md-6">
           <article class="blog-post-wrapper">
-            <img src="./assets/images/03.jpg" class="img-responsive" alt="이미지">
+            <img src="./assets/images/03.png" class="img-responsive" alt="이미지">
             <div class="entry-title">
               <h3> Web Site</h3>
               <p>말랑빵냥 웹사이트 둘러보기</p>
 
               <div class="circle-button">
-                <a href="#">
-                  <img src="./assets/images/button.png" alt="더보기 버튼">
+                <a href="https://leeboeun375.github.io/malangBBangnyang/" target="_blank">
+                  <img src="./assets/images/button.png" class="button-img" alt="더보기 버튼">
                 </a>
               </div>
           </article>
@@ -203,16 +209,17 @@
 
         <div class="col-md-6">
           <article class="blog-post-wrapper">
-            <img src="./assets/images/04.jpg" class="img-responsive" alt="이미지">
+            <img src="./assets/images/04.png" class="img-responsive" alt="이미지">
             <div class="entry-title">
               <h3>brand E-Book</h3>
               <p>말랑빵냥 브랜드 스토리 E-book 둘러보기</p>
 
               <div class="circle-button">
-                <a href="./assets/Ebook/ebook.html">
-                  <img src="./assets/images/button.png" alt="더보기 버튼">
+                <a href="./assets/Ebook/ebook.html" target="_blank">
+                  <img src="./assets/images/button.png" class="button-img" alt="더보기 버튼">
                 </a>
               </div>
+            </div>
           </article>
         </div>
       </div>
@@ -243,9 +250,9 @@
                 <div class="portfolio">
                   <div class="tt-overlay"></div>
                   <div class="links"><i class="fa fa-search-plus"></i></div>
-                  <img src="assets/images/Rectangle 23.png" alt="image">
+                  <img src="./assets/images/artwork2.jpg" alt="image">
                   <div class="portfolio-info">
-                    <h3>Artwork Title</h3>
+                    <h3>네일 할인 광고 디자인</h3>
                   </div>
                 </div>
               </div>
@@ -259,9 +266,9 @@
                 <div class="portfolio">
                   <div class="tt-overlay"></div>
                   <div class="links"><i class="fa fa-search-plus"></i></div>
-                  <img src="assets/images/Rectangle 24.png" alt="image">
+                  <img src="./assets/images/artwork3.jpg" alt="image">
                   <div class="portfolio-info">
-                    <h3>Artwork Title</h3>
+                    <h3>프로틴쉐이크 광고 디자인</h3>
                   </div>
                 </div>
               </div>
@@ -275,63 +282,14 @@
                 <div class="portfolio">
                   <div class="tt-overlay"></div>
                   <div class="links"><i class="fa fa-search-plus"></i></div>
-                  <img src="assets/images/Rectangle 25.png" alt="image">
+                  <img src="./assets/images/artwork1.jpg" alt="image">
                   <div class="portfolio-info">
-                    <h3>Artwork Title</h3>
+                    <h3>선크림 광고 디자인</h3>
                   </div>
                 </div>
               </div>
             </a>
           </div>
-
-          <!-- 4 -->
-          <div class="portfolio-item col-xs-12 col-sm-4">
-            <a href="#none" id="popup04">
-              <div class="portfolio-bg">
-                <div class="portfolio">
-                  <div class="tt-overlay"></div>
-                  <div class="links"><i class="fa fa-search-plus"></i></div>
-                  <img src="assets/images/Rectangle 30.png" alt="image">
-                  <div class="portfolio-info">
-                    <h3>Artwork Title</h3>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- 5 -->
-          <div class="portfolio-item col-xs-12 col-sm-4">
-            <a href="#none" id="popup05">
-              <div class="portfolio-bg">
-                <div class="portfolio">
-                  <div class="tt-overlay"></div>
-                  <div class="links"><i class="fa fa-search-plus"></i></div>
-                  <img src="assets/images/Rectangle 31.png" alt="image">
-                  <div class="portfolio-info">
-                    <h3>Artwork Title</h3>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- 6 -->
-          <div class="portfolio-item col-xs-12 col-sm-4">
-            <a href="#none" id="popup06">
-              <div class="portfolio-bg">
-                <div class="portfolio">
-                  <div class="tt-overlay"></div>
-                  <div class="links"><i class="fa fa-search-plus"></i></div>
-                  <img src="assets/images/Rectangle 32.png" alt="image">
-                  <div class="portfolio-info">
-                    <h3>Artwork Title</h3>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-
         </div><!-- /.snsbox -->
       </div><!-- /.row -->
   </section>
@@ -341,19 +299,30 @@
   <div class="popup" id="pop01">
     <div class="popup_in">
       <i class="fa fa-times"></i>
-      <img src="./assets/images/sns_banner1.jpg" alt="sns 이미지1">
-      <img src="./assets/images/sns_banner2.jpg" alt="sns 이미지2">
+      <img src="./assets/images/artwork2.jpg" alt="sns 이미지1">
+      <img src="./assets/images/artwork2-1.jpg" alt="sns 이미지2">
     </div>
   </div>
 
   <div class="popup" id="pop02">
     <div class="popup_in">
       <i class="fa fa-times"></i>
-      <img src="./assets/images/sns_banner1.jpg" alt="sns 이미지1">
-      <img src="./assets/images/sns_banner2.jpg" alt="sns 이미지2">
+      <img src="./assets/images/artwork3.jpg" alt="sns 이미지1">
+      <img src="./assets/images/artwork3-2.jpg" alt="sns 이미지2">
+      <img src="./assets/images/artwork3-1.jpg" alt="sns 이미지2">
     </div>
-  </div><!-- End Popup Section -->
+  </div>
 
+  <div class="popup" id="pop03">
+    <div class="popup_in">
+      <i class="fa fa-times"></i>
+      <img src="./assets/images/artwork1.jpg" alt="sns 이미지1">
+      <img src="./assets/images/artwork1-2.jpg" alt="sns 이미지3">
+      <img src="./assets/images/artwork1-1.jpg" alt="sns 이미지2">
+    </div>
+  </div>
+  <!-- End Popup Section -->
+ 
 
   <!-- Skills Section -->
   <section id="skills" class="skills-section section-padding">
@@ -365,20 +334,20 @@
 
       <div class="row more-skill text-center">
         <ul class="more-skill-chart">
-          <li class="p95"><span>
+          <li><span>
               <p>Photoshop</p>95%
             </span></li>
-          <li class="p75"><span>
+          <li><span>
               <p>Indesign</p>75%
             </span></li>
-          <li class="p65"><span>
+          <li><span>
               <p>After Effects
               </p>65%
             </span></li>
-          <li class="p80"><span>
+          <li><span>
               <p>Illustrator</p>80%
             </span></li>
-          <li class="p65"><span>
+          <li><span>
               <p>Premiere Pro</p>65%
             </span></li>
         </ul>
@@ -398,8 +367,8 @@
               <h3>HTML</h3>
             </div>
             <div class="progress">
-              <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="95" aria-valuemin="0"
-                aria-valuemax="100"><span>95%</span>
+              <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                aria-valuemax="100"><span>80%</span>
               </div>
             </div><!-- /.progress -->
           </div><!-- /.skill-progress -->
@@ -409,8 +378,8 @@
               <h3>CSS</h3>
             </div>
             <div class="progress">
-              <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                aria-valuemax="100"><span>80%</span>
+              <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                aria-valuemax="100"><span>70%</span>
               </div>
             </div><!-- /.progress -->
           </div><!-- /.skill-progress -->
@@ -420,8 +389,8 @@
               <h3>JAVASCRIPT</h3>
             </div>
             <div class="progress">
-              <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                aria-valuemax="100"><span>80%</span>
+              <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="65" aria-valuemin="0"
+                aria-valuemax="100"><span>65%</span>
               </div>
             </div><!-- /.progress -->
           </div><!-- /.skill-progress -->
@@ -455,13 +424,14 @@
                   <div class="timeline-content">
                     <div class="timeline-heading">
                       <h3>동주여자고등학교</h3>
-                    
+                      <span>문과</span>
+
                     </div><!-- /timeline-heading -->
 
                     <div class="timeline-body">
-                      <p>I have completed UI Engineering degree from ABC University, Boston, USA at feel the
-                        charm of
-                        existence in this spot, which was creat.</p>
+                      <p>퍼즐 게임 배경 디자인 프로젝트에 참여해, 메인 맵과 서브 공간의 배경 원화 작업을 맡았습니다.
+                        배경 콘셉트 설정부터 색감 조절, 레이어 분리 작업까지 <br>담당했으며 효과 적용을 고려한 디자인도 진행했습니다.
+                      </p>
                     </div><!-- /timeline-body -->
                   </div> <!-- /timeline-content -->
                 </div><!-- /timeline-panel -->
@@ -476,13 +446,13 @@
                   <div class="timeline-content">
                     <div class="timeline-heading">
                       <h3>동의대학교 </h3>
-                      <span>디지털콘텐츠게임공학부  게임공학과전공</span>
+                      <span>디지털콘텐츠게임공학부 게임공학과전공</span>
                     </div><!-- /timeline-heading -->
 
                     <div class="timeline-body">
-                      <p>From this college of existence in this spot, which was created for the bliss of souls
-                        like
-                        mine. I am so happy, my dear friend.</p>
+                      <p>2D 게임 캐릭터 디자인 프로젝트에 참여해, 컨셉 설정부터 캐릭터 시트 제작 및 아이템, 의상 등의 디자인까지 담당하며 전체적인 스타일의 통일성과 게임 내 활용도를 고려한
+                        작업을 진행했습니다.
+                      </p>
                     </div><!-- /timeline-body -->
                   </div> <!-- /timeline-content -->
                 </div> <!-- /timeline-panel -->
@@ -501,62 +471,9 @@
                     </div><!-- /timeline-heading -->
 
                     <div class="timeline-body">
-                      <p>I was awesome at arts, and feel the charm of existence in this spot, which was created
-                        for the
-                        bliss of souls like mine. I am so happy.</p>
-                    </div><!-- /timeline-body -->
-                  </div> <!-- /timeline-content -->
-                </div><!-- /timeline-panel -->
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div><!-- /row -->
-
-      <div class="row">
-        <div class="col-md-12">
-          <div class="resume-title">
-            <h3>Experience</h3>
-          </div>
-          <div class="resume">
-            <ul class="timeline">
-              <li class="timeline-inverted">
-                <div class="posted-date">
-                  <span class="month">2011-2013</span>
-                </div><!-- /posted-date -->
-
-                <div class="timeline-panel wow fadeInUp">
-                  <div class="timeline-content">
-                    <div class="timeline-heading">
-                      <h3>Junior ui designer</h3>
-                      <span>XYZ Design Home, One Street, Boston</span>
-                    </div><!-- /timeline-heading -->
-
-                    <div class="timeline-body">
-                      <p>I am alone, and feel the charm of existence in this spot, which was created for the
-                        bliss of
-                        souls like mine. I am so happy, my dear friend.</p>
-                    </div><!-- /timeline-body -->
-                  </div> <!-- /timeline-content -->
-                </div> <!-- /timeline-panel -->
-              </li>
-
-              <li>
-                <div class="posted-date">
-                  <span class="month">2013-2015</span>
-                </div><!-- /posted-date -->
-
-                <div class="timeline-panel wow fadeInUp">
-                  <div class="timeline-content">
-                    <div class="timeline-heading">
-                      <h3>Lead UX Consultant</h3>
-                      <span>Lucky8 Designing Firm, California</span>
-                    </div><!-- /timeline-heading -->
-
-                    <div class="timeline-body">
-                      <p>Completely provide access to seamless manufactured products before functionalized
-                        synergy.
-                        Progressively redefine competitive.</p>
+                      <p>Figma와 Photoshop을 활용해 웹사이트 디자인을 기획하고, 화면 흐름에 <br>맞춘 UI 구성과 시안 제작을 진행했습니다.
+                        특히 브랜드 아이덴티티를 효과적으로 전달할 수 있도록 로고 디자인과 컬러 시스템 구성에 집중했습니다.
+                      </p>
                     </div><!-- /timeline-body -->
                   </div> <!-- /timeline-content -->
                 </div><!-- /timeline-panel -->
@@ -645,9 +562,6 @@
   <script src="assets/js/jquery.inview.min.js"></script>
   <script src="assets/js/jquery.easypiechart.js"></script>
   <script src="assets/js/jquery.shuffle.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
-  <script src="assets/js/jquery.fitvids.js"></script>
 
   <script src="assets/js/scripts.js"></script>
 </body>
