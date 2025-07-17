@@ -32,15 +32,22 @@ body {
     font-size: 14px;
     color: #282828;
     background-color: #fff;
+    cursor: url('../images/mouse.png'), auto;
     -webkit-text-size-adjust: 100%;
     -webkit-overflow-scrolling: touch;
     -webkit-font-smoothing: antialiased !important;
 }
 
+
+a:hover,
+button:hover,
+img:hover {
+    cursor: url('../images/mouse2.png'), auto;
+}
+
 body,
 html {
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
 /* Link style
@@ -62,6 +69,8 @@ a:hover {
     color: #333333;
     text-decoration: none;
 }
+
+
 
 
 /* Transition elsements
@@ -290,7 +299,7 @@ ul.list-check li::before {
 
 /* === MAIN === */
 .section-padding {
-    padding: 120px 0 100px;
+    padding: 120px 0 50px;
 }
 
 
@@ -328,7 +337,14 @@ ul.list-check li::before {
 
 #home video {
     width: 100%;
+}
+
+.pc {
     display: block;
+}
+
+.mobile {
+    display: none;
 }
 
 /* === NAVIGATION === */
@@ -454,6 +470,7 @@ ul.list-check li::before {
 
 
 
+
 /* === About Section === */
 .short-info {
     margin-bottom: 40px;
@@ -496,13 +513,11 @@ ul.list-check li::before {
 .biography {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    border: 1px solid #EEEEEE;
     position: relative;
 }
 
 .biography::after {
     content: "";
-    border-bottom: 1px solid #EEEEEE;
     position: absolute;
     bottom: -3px;
     width: 100%;
@@ -595,24 +610,21 @@ ul.list-check li::before {
     padding-top: 10px;
 }
 
-.button {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+/* 기본 버튼 이미지 스타일 */
+.circle-button .button-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.3s ease;
 }
 
-.button a {
-    border: 1px solid #333333;
-    color: #333333;
-    padding: 5px 15px;
-    border-radius: 50px;
-    display: inline-block;
+/* blog-post-wrapper에 hover하면 버튼 이미지 바뀜 */
+.blog-post-wrapper:hover .button-img {
+    content: url('../images/button2.png');
+    /* hover 시 다른 이미지로 변경 */
 }
 
-.button a:hover {
-    color: #4eb28f;
-    border-color: #4eb28f;
-}
+
 
 /*
 Icon for all respective meta
@@ -643,11 +655,10 @@ Icon for all respective meta
 .blog-post-wrapper img {
     width: 100%;
     height: 400px;
-    /* 원하는 높이로 고정 */
     object-fit: cover;
-    /* 비율 유지하면서 잘라냄 */
     border-radius: 10px;
     display: block;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 
@@ -662,6 +673,7 @@ Icon for all respective meta
 }
 
 .blog-post-wrapper:hover {
+    box-shadow: 0 4px 10px #CACFE3;
     transform: translateY(-4px);
 }
 
@@ -735,7 +747,7 @@ Icon for all respective meta
 .portfolio-bg {
     margin: 5px;
     background: #fff;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #eee;
     border-radius: 10px;
 }
@@ -768,6 +780,10 @@ Icon for all respective meta
 
 
 .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     width: 90px;
     height: 40px;
     position: absolute;
@@ -776,47 +792,28 @@ Icon for all respective meta
     margin-top: -20px;
     margin-left: -45px;
     opacity: 0;
-    -webkit-transform: translate(0, -50px);
-    -moz-transform: translate(0, -50px);
-    -ms-transform: translate(0, -50px);
-    -o-transform: translate(0, -50px);
     transform: translate(0, -50px);
-    text-align: center;
 }
 
 .links i {
-    position: relative;
-    color: #68c3a3;
-    font-size: 16px;
-    margin: 0 13px;
-    z-index: 100;
-}
-
-.links i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
     color: #fff;
+    background-color: #5e6686;
+    border-radius: 50%;
+    transition: background-color 0.4s;
 }
 
-.links i::after {
-    position: absolute;
-    content: "";
-    left: -7px;
-    top: -7px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #CACFE3;
-    z-index: -1;
-    border-radius: 50px;
-}
-
-.links i::after {
-    background-color: #CACFE3;
-}
 
 .portfolio-info {
     position: absolute;
     bottom: -100%;
     left: 0;
-    background-color: #CACFE3;
+    background-color: #5e6686;
     color: #fff;
     height: 45px;
     width: 100%;
@@ -879,7 +876,7 @@ Icon for all respective meta
 }
 
 .popup_in img {
-    width: 49%;
+    width: 32%;
 }
 
 /* === Skill Section === */
@@ -913,7 +910,7 @@ Icon for all respective meta
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0px 190px ;
+    gap: 0px 190px;
     padding: 0;
     margin: 0;
 }
@@ -945,7 +942,7 @@ Icon for all respective meta
 .more-skill-chart li span p {
     font-weight: 400;
     font-size: 25px;
-    
+
 }
 
 
@@ -956,12 +953,13 @@ Icon for all respective meta
     bottom: 0;
     left: 50%;
     width: 220%;
-    height: 100px;
+    height: 0px;
     background: linear-gradient(180deg, rgba(209, 208, 243, 0.7), rgba(240, 189, 193, 0.7));
     border-radius: 45% 55% 40% 60% / 60% 40% 60% 40%;
     transform: translateX(-50%) translateY(20%);
     animation: waveMove 3.2s ease-in-out infinite;
     z-index: 1;
+    transition: 1.2s;
 }
 
 .more-skill-chart li::after {
@@ -970,12 +968,13 @@ Icon for all respective meta
     bottom: 0;
     left: 50%;
     width: 220%;
-    height: 80px;
+    height: 0px;
     background: linear-gradient(180deg, #CACFE3, #FF6262);
     border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
     transform: translateX(-50%) translateY(25%);
     animation: waveMove 4s ease-in-out infinite reverse;
     z-index: 0;
+    transition: 1.5s;
 }
 
 /* 파도 높이를 퍼센트 기준으로 설정 (높을수록 많이 차오름) */
@@ -1021,7 +1020,7 @@ Icon for all respective meta
 }
 
 .progress {
-    height: 20px;
+    height: 30px;
     margin-bottom: 70px;
     background-color: #E6E6E6;
     border-radius: 50px;
@@ -1031,6 +1030,7 @@ Icon for all respective meta
 
 .progress-bar {
     background-color: #CACFE3;
+    position: relative;
 }
 
 .progress-bar span {
@@ -1038,7 +1038,7 @@ Icon for all respective meta
     font-weight: 600;
     font-size: 20px;
     position: absolute;
-    top: -30px;
+    top: 4px;
     right: 15px;
 }
 
@@ -1070,6 +1070,7 @@ Icon for all respective meta
     font-weight: 400;
     margin-bottom: 5px;
 }
+
 
 
 /* === Resume Section === */
@@ -1110,7 +1111,7 @@ Resume Timeline
     top: -8px;
     width: 10px;
     height: 10px;
-    background-color: #CACFE3;
+    background-color: #f14b4b;
     left: 50%;
     margin-left: -6px;
     -webkit-transform: rotate(45deg);
@@ -1126,7 +1127,7 @@ Resume Timeline
     bottom: -8px;
     width: 10px;
     height: 10px;
-    background-color: #CACFE3;
+    background-color: #f14b4b;
     left: 50%;
     margin-left: -6px;
     -webkit-transform: rotate(45deg);
@@ -1142,8 +1143,9 @@ Resume Timeline
     top: 0;
     bottom: 0;
     width: 2px;
-    margin-left: -1.5px;
-    background-color: #CACFE3;
+    left: 1px;
+    transform: translateX(-90%);
+    background-color: #f14b4b;
 }
 
 .timeline>li {
@@ -1238,10 +1240,6 @@ Resume Timeline
     margin-bottom: 20px;
 }
 
-
-
-
-
 @media(min-width:992px) {
     .timeline:before {
         left: 50%;
@@ -1252,18 +1250,22 @@ Resume Timeline
         min-height: 100px;
     }
 
-    .timeline>li .posted-date {
-        position: absolute;
-        text-align: center;
-        background-color: #fff;
-    }
-
     .timeline>li .timeline-panel {
         float: left;
-        width: 43%;
+        width: 41%;
         text-align: right;
         border: 1px solid #eee;
         position: relative;
+        -webkit-transition: all 400ms;
+        -moz-transition: all 400ms;
+        -o-transition: all 400ms;
+        transition: all 400ms;
+    }
+
+    .timeline>li .timeline-panel:hover {
+        background: #fff;
+        color: #f14b4b;
+        border-color: #f14b4b;
     }
 
     .timeline-content {
@@ -1287,11 +1289,6 @@ Resume Timeline
         z-index: -1;
     }
 
-    .timeline>li .timeline-content:hover {
-        background: #68c3a3;
-        color: #fff;
-    }
-
     .timeline>li .timeline-panel::before,
     .timeline>li.timeline-inverted .timeline-panel::before {
         content: "";
@@ -1311,7 +1308,7 @@ Resume Timeline
     }
 
     .timeline>li .timeline-panel:hover::before {
-        border-left: 12px solid #95c5b4;
+        border-left: 12px solid #f14b4b;
     }
 
     .timeline>li.timeline-inverted .timeline-panel::before {
@@ -1324,7 +1321,7 @@ Resume Timeline
     }
 
     .timeline>li.timeline-inverted .timeline-panel:hover::before {
-        border-right: 12px solid #68c3a3;
+        border-right: 12px solid #f14b4b;
         border-left: 0;
     }
 
@@ -1347,10 +1344,6 @@ Resume Timeline
         transition: all 400ms;
     }
 
-    .timeline>li .timeline-panel:hover::after {
-        border-left: 12px solid #68c3a3;
-    }
-
     .timeline>li.timeline-inverted .timeline-panel::after {
         right: 100%;
         margin-right: -2px;
@@ -1362,34 +1355,44 @@ Resume Timeline
     }
 
     .timeline>li.timeline-inverted .timeline-panel:hover::after {
-        border-right: 12px solid #68c3a3;
         border-left: 0;
     }
 
-.timeline>li .posted-date {
-    position: absolute;
-    text-align: center;
-    background-color: #fff;
+    .timeline>li .posted-date {
+        position: absolute;
+        text-align: center;
+        background-color: #fff;
 
-    left: 50%;
-    width: 160px;         /* 넓이를 더 주고 */
-    margin-left: -80px;   /* 절반 만큼 빼줘서 중앙 정렬 */
+        top: 4px;
+        left: 50%;
+        width: 160px;
+        /* 넓이를 더 주고 */
+        margin-left: -80px;
+        /* 절반 만큼 빼줘서 중앙 정렬 */
+    }
+
+    .timeline>li .posted-date .month {
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 700;
+        display: block;
+        color: #2c3e50;
+        margin: 20px 0;
+
+        float: none;
+        /* ✅ float 제거 */
+        text-align: center;
+        /* ✅ 가운데 정렬 */
+        white-space: nowrap;
+        /* ✅ 줄바꿈 방지 (선택) */
+    }
+
 }
 
-.timeline>li .posted-date .month {
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: 700;
-    display: block;
-    color: #2c3e50;
-    margin-bottom: 15px;
-    margin-top: 15px;
-
-    float: none;            /* ✅ float 제거 */
-    text-align: center;     /* ✅ 가운데 정렬 */
-    white-space: nowrap;    /* ✅ 줄바꿈 방지 (선택) */
-}
-
+@media(min-width:1199px) {
+    .timeline>li .timeline-panel {
+        width: 43%;
+    }
 }
 
 /* === contact Section === */

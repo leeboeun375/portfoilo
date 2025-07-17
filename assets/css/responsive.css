@@ -1,12 +1,21 @@
-/* Extra small devices (phones, less than 339px) */
-@media (max-width : 339px) {
-	.m-skill {
-		margin-bottom: 60px;
+/* Extra small devices (phones, less than 991px) */
+@media (max-width : 991px) {
+	.more-skill-chart{
+		gap: 20px 0;
+		justify-content: space-around;
 	}
 }
 
 /* Extra small devices (phones, less than 768px) */
 @media (max-width : 766px) {
+	.pc {
+		display: none;
+	}
+
+	.mobile {
+		display: block;
+	}
+
 	.intro h1 {
 		font-size: 40px;
 		line-height: 40px;
@@ -179,6 +188,13 @@
 	}
 }
 
+/* Extra small devices (phones, less than 339px) */
+@media (max-width : 339px) {
+	.m-skill {
+		margin-bottom: 60px;
+	}
+}
+
 /* Landscape Mobile */
 @media only screen and (min-width : 480px) and (max-width : 767px) {
 	.intro h1 {
@@ -229,9 +245,12 @@
 		left: 1px;
 	}
 
+
 	/*skill section*/
 	.skill-title h3 {
-		font-size: 12px;
+		font-size: 20px;
+		font-weight: 500;
+		
 	}
 
 	/*facts section*/
@@ -353,6 +372,7 @@
 	.resume:after {
 		left: 0px;
 	}
+	
 
 	/*skill section*/
 	.skill-title h3 {
@@ -418,24 +438,25 @@
 		font-size: 23px;
 
 	}
+}
 
-	/* Medium devices (desktops, 992px and up) */
-	@media (min-width : 992px) and (max-width : 1199px) {
-		.portfolio-item {
-			min-height: 150px;
-		}
-
-		.more-skill-chart li {
-			width: 150px;
-			height: 150px;
-			font-size: 20px;
-		}
-
-		.more-skill-chart li span p {
-			font-size: 20px;
-		}
-
-		.navbar-custom .navbar-nav>li {
-			margin: 0;
-		}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width : 992px) and (max-width : 1199px) {
+	.portfolio-item {
+		min-height: 150px;
 	}
+
+	.more-skill-chart li {
+		width: 150px;
+		height: 150px;
+		font-size: 20px;
+	}
+
+	.more-skill-chart li span p {
+		font-size: 20px;
+	}
+
+	.navbar-custom .navbar-nav>li {
+		margin: 0;
+	}
+}
