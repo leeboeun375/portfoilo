@@ -123,22 +123,28 @@ jQuery(function ($) {
     // -------------------------------------------------------------
     // More skill
     // -------------------------------------------------------------
-    $('.more-skill').bind('inview', function (event, visible, visiblePartX, visiblePartY) {
-        if (visible) {
-            $('.chart').easyPieChart({
-                //your configuration goes here
-                easing: 'easeOut',
-                delay: 3000,
-                barColor: '#68c3a3',
-                trackColor: 'rgba(255,255,255,0.2)',
-                scaleColor: false,
-                lineWidth: 8,
-                size: 140,
-                animate: 2000,
-                onStep: function (from, to, percent) {
-                    this.el.children[0].innerHTML = Math.round(percent);
-                }
 
+    $('.more-skill-chart').bind('inview', function (event, visible, visiblePartX, visiblePartY) {
+        if (visible) {
+            $.each(
+                $('.more-skill-chart li:nth-child(1)'), function () {
+                $(this).addClass("p95");
+            });
+            $.each(
+                $('.more-skill-chart li:nth-child(2)'), function () {
+                $(this).addClass("p75");
+            });
+             $.each(
+                $('.more-skill-chart li:nth-child(3)'), function () {
+                $(this).addClass("p65");
+            });
+             $.each(
+                $('.more-skill-chart li:nth-child(4)'), function () {
+                $(this).addClass("p80");
+            });
+             $.each(
+                $('.more-skill-chart li:nth-child(5)'), function () {
+                $(this).addClass("p65");
             });
             $(this).unbind('inview');
         }
@@ -209,31 +215,31 @@ jQuery(function ($) {
     // -------------------------------------------------------------
     // Fit Vids
     // -------------------------------------------------------------
-    (function () {
-        $(".video-container").fitVids();
-    }());
+    // (function () {
+    //     $(".video-container").fitVids();
+    // }());
 
 
 
     // -------------------------------------------------------------
     // Vidio auto play
     // -------------------------------------------------------------
-    (function () {
+    // (function () {
 
-        /* Vimeo API: http://developer.vimeo.com/player/js-api */
+    //     /* Vimeo API: http://developer.vimeo.com/player/js-api */
 
-        var iframe = document.getElementById('nofocusvideo');
-        // $f == Froogaloop
-        var player = $f(iframe);
+    //     var iframe = document.getElementById('nofocusvideo');
+    //     // $f == Froogaloop
+    //     var player = $f(iframe);
 
-        $('.modal').on('hidden.bs.modal', function () {
-            player.api('pause');
-        })
+    //     $('.modal').on('hidden.bs.modal', function () {
+    //         player.api('pause');
+    //     })
 
-        $('.modal').on('shown.bs.modal', function () {
-            player.api('play');
-        })
-    }());
+    //     $('.modal').on('shown.bs.modal', function () {
+    //         player.api('play');
+    //     })
+    // }());
 
 
 
@@ -273,23 +279,24 @@ jQuery(function ($) {
     // -------------------------------------------------------------
     // Popup JS
     // -------------------------------------------------------------
-    
-    $(function(){
-		$('#popup01').click(function(){
-			$('#pop01').show();
-		});
-		$('#popup02').click(function(){
-			$('#pop02').show();
-		});
-
-		$('.popup i').click(function(){
-			$('.popup').hide();
-		});
-	});
 
 });
 
 
 
+$(function () {
+    $('#popup01').click(function () {
+        $('#pop01').show();
+    });
+    $('#popup02').click(function () {
+        $('#pop02').show();
+    });
+    $('#popup03').click(function () {
+        $('#pop03').show();  // ✅ 팝업3 연결 추가
+    });
 
-
+    // 공통 닫기 기능
+    $('.popup i').click(function () {
+        $(this).closest('.popup').hide();  // ✅ 해당 팝업만 닫히게
+    });
+});
